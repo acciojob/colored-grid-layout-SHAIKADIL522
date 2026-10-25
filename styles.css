@@ -1,1 +1,44 @@
 /*  your css code here. If applicable */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 8px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+  height: 90vh;
+}
+
+.item {
+  background-color: green;
+  color: white;
+  font-size: 4vw;
+}
+
+/* 1st: span all 4 columns */
+.item:nth-child(1) {
+  grid-column: span 4;
+}
+
+/* 2nd: span 4 rows */
+.item:nth-child(2) {
+  grid-row: span 4;
+}
+
+/* 4th and 5th: span 2 columns */
+.item:nth-child(4),
+.item:nth-child(5) {
+  grid-column: span 2;
+}
+
+/* 10th: span 3 columns */
+.item:nth-child(10) {
+  grid-column: span 3;
+}
